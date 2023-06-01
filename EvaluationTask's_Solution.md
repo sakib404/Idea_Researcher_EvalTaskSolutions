@@ -1,24 +1,12 @@
-# evaluation_task
-Please read the task from readme and start the work . You have two weeks to reply with all the answer. I do not expect you to answer everything perfectly . If you answer it smartly and prove that you worked hard for this task , you will be selected.
-Even if you are unable to finish the work please share your works in the weeks end. 
-
-You will be making a github repository and share your task answer and code work. 
-Send me the github link once you are done.
-
-I have given enough hints so that you can work along the way in the task.
-DO NOT MAIL ME FOR ASKING ANY KIND OF QUESTION REGARDING THE TASK.
-
-Read the task 2,3 times. So that you can answer it .
-
----
-
 # Technical Exam: Blender, Python, JavaScript 3D, and Docker 
 
 This technical exam incorporates the mentioned technologies: Blender, Python, JavaScript 3D, and Docker.
 
 ## Blender & Python
 
-Q1.1: Blender provides an API that can be interacted with using Python. How can you use Python scripting to automate the creation of a 3D model in Blender? Please provide a basic code example.
+**Q1.1:** Blender provides an API that can be interacted with using Python. How can you use Python scripting to automate the creation of a 3D model in Blender? Please provide a basic code example.<br>
+**Answer:**
+
 
 Q1.2: In Blender's Python API, what is the purpose of the `bpy` module? How can you use it to manipulate object transformations in a 3D scene?
 
