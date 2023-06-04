@@ -5,7 +5,29 @@ This technical exam incorporates the mentioned technologies: Blender, Python, Ja
 ## Blender & Python
 
 **Q1.1:** Blender provides an API that can be interacted with using Python. How can you use Python scripting to automate the creation of a 3D model in Blender? Please provide a basic code example.<br>
-**Answer:**
+**Answer:** To automate the creation of a 3D model in Blender using Python scripting, you can utilize the Blender Python API (bpy). Here's a basic code example that demonstrates how to create a cube in Blender using Python: 
+```python
+
+import bpy
+
+# Clear existing objects
+bpy.ops.object.select_all(action='DESELECT')
+bpy.ops.object.select_by_type(type='MESH')
+bpy.ops.object.delete()
+
+# Create a new cube
+bpy.ops.mesh.primitive_cube_add(size=2)
+
+# Get a reference to the cube object
+cube = bpy.context.object
+
+# Translate the cube
+cube.location = (0, 0, 1)
+
+# Rotate the cube
+cube.rotation_euler = (0, 0, 0)
+
+```
 
 
 Q1.2: In Blender's Python API, what is the purpose of the `bpy` module? How can you use it to manipulate object transformations in a 3D scene?
