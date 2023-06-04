@@ -30,7 +30,7 @@ cube.rotation_euler = (0, 0, 0)
 ```
 
 **Q1.2:** In Blender's Python API, what is the purpose of the `bpy` module? How can you use it to manipulate object transformations in a 3D scene?<br>
-**Answer:**
+**Answer:** 
 
 
 ## Python & Docker
