@@ -4,8 +4,8 @@ This technical exam incorporates the mentioned technologies: Blender, Python, Ja
 
 ## Blender & Python
 
-**Q1.1:** Blender provides an API that can be interacted with using Python. How can you use Python scripting to automate the creation of a 3D model in Blender? Please provide a basic code example.<br>
-**Answer:** To automate the creation of a 3D model in Blender using Python scripting, you can utilize the Blender Python API (bpy). Here's a basic code example that demonstrates how to create a cube in Blender using Python: 
+***Q1.1:*** Blender provides an API that can be interacted with using Python. How can you use Python scripting to automate the creation of a 3D model in Blender? Please provide a basic code example.<br>
+***Answer:*** To automate the creation of a 3D model in Blender using Python scripting, you can utilize the Blender Python API (bpy). Here's a basic code example that demonstrates how to create a cube in Blender using Python: 
 ```python
 
 import bpy
@@ -30,8 +30,8 @@ cube.rotation_euler = (0, 0, 0)
 ```
 ![Q1](https://github.com/sakib404/Idea_Researcher_EvalTaskSolutions/assets/62664582/675bdd4d-1d92-4336-8e6f-fd53205a907a)
 
-**Q1.2:** In Blender's Python API, what is the purpose of the `bpy` module? How can you use it to manipulate object transformations in a 3D scene?<br>
-**Answer:** In Blender's Python API, the bpy module provides access to a wide range of functionality and tools to manipulate various aspects of Blender, such as objects, materials, rendering, and more. It serves as the primary interface for scripting within Blender.
+***Q1.2:*** In Blender's Python API, what is the purpose of the `bpy` module? How can you use it to manipulate object transformations in a 3D scene?<br>
+***Answer:*** In Blender's Python API, the bpy module provides access to a wide range of functionality and tools to manipulate various aspects of Blender, such as objects, materials, rendering, and more. It serves as the primary interface for scripting within Blender.
 
 To manipulate object transformations in a 3D scene using the bpy module, I can utilize properties and methods available for objects in Blender. Here's an example of how I can use the bpy module to manipulate object transformations:
 
@@ -55,7 +55,7 @@ obj.scale = (2, 2, 2)
 
 ## Python & Docker
 
-**Q2.1:** Describe the steps to create a Docker container for a Python-based application. What information would you need to include in the Dockerfile?<br>
+***Q2.1:*** Describe the steps to create a Docker container for a Python-based application. What information would you need to include in the Dockerfile?<br>
 **Answer:** To create a Docker container for a Python-based application, I can follow these steps:
 1. *Create a Dockerfile:* Start by creating a file named "Dockerfile" (without any file extension) in your project directory.
 2. *Specify the base image:* In the Dockerfile, specify the base image I want to use for my container. For example, to use the official Python image from Docker Hub, I can add the following line to my Dockerfile: ``` FROM python:3.9 ```
@@ -67,13 +67,24 @@ obj.scale = (2, 2, 2)
 8. *Run the Docker container:* After the Docker image is built, I can run a container based on that image. Use the following command: `docker run -d image-name:tag .` Replace `image-name` and `tag` with the values you used during the image build.   
 
 
-Q2.2: Explain how you can use Docker Compose to manage multi-container Python applications.
+***Q2.2:*** Explain how you can use Docker Compose to manage multi-container Python applications.<br>
+***Answer:*** Docker Compose is a tool that allows me to define and manage multi-container applications using a declarative YAML file. It simplifies the process of orchestrating multiple containers, their dependencies, and the network configuration. To manage a multi-container Python application using Docker Compose, I can follow these steps:
+1. *Install Docker Compose:* Ensure that Docker Compose is installed on my system. I can refer to the official Docker documentation for installation instructions specific to my operating system.
+2. *Create a Docker Compose file:* Create a file named docker-compose.yml in my project directory. This file will define the services, dependencies, and configurations for my multi-container application.
+3. *Define services:* In the `docker-compose.yml` file, specify the services (containers) that make up my application. Each service represents a separate container. For example, if my Python application consists of a web server and a database, I would define two services: one for the web server and another for the database. Specify the Docker image, environment variables, ports, volumes, and other configuration details for each service.
+4. *Specify dependencies:* If my services have dependencies on each other, I can define the dependencies using the `depends_on` keyword in the Docker Compose file. This ensures that dependent services start before the services that rely on them.
+5. *Configure the network:* Docker Compose automatically creates a network for my application, allowing the services to communicate with each other using their service names as hostnames. I can also specify network configurations, such as exposing ports or linking services to external networks.
+6. *Build and run the containers:* Once I have defined the Docker Compose file, I can build and run the containers using the `docker-compose` command. Open a terminal or command prompt, navigate to the project directory containing the `docker-compose.yml` file, and run the following command: `docker-compose up` This command will build the required Docker images and start the containers based on the configurations defined in the Docker Compose file.
+7. *Manage the containers:* Docker Compose provides several commands to manage the containers defined in my `docker-compose.yml` file. For example, I can use `docker-compose start`, `docker-compose stop`, or `docker-compose restart` to control the container lifecycle.<br>
+
+By utilizing Docker Compose, I can easily manage and orchestrate multiple containers for my Python application. It simplifies the deployment and scaling process, allowing me to define the entire application stack in a single configuration file and manage it with simple commands.  
+
 
 ## JavaScript 3D (Three.js)
 
 Q3.1: Describe the fundamental components needed to render a basic 3D scene using Three.js. 
 
-Q3.2: How can you import and use a 3D model created in Blender within a Three.js application? 
+Q3.2: How can you import and use a 3D model created in Blender within a Three.js application? 0
 
 ## Blender, Python, JavaScript 3D & Docker
 
