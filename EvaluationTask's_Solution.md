@@ -31,12 +31,41 @@ cube.rotation_euler = (0, 0, 0)
 ![Q1](https://github.com/sakib404/Idea_Researcher_EvalTaskSolutions/assets/62664582/675bdd4d-1d92-4336-8e6f-fd53205a907a)
 
 **Q1.2:** In Blender's Python API, what is the purpose of the `bpy` module? How can you use it to manipulate object transformations in a 3D scene?<br>
-**Answer:** 
+**Answer:** In Blender's Python API, the bpy module provides access to a wide range of functionality and tools to manipulate various aspects of Blender, such as objects, materials, rendering, and more. It serves as the primary interface for scripting within Blender.
+
+To manipulate object transformations in a 3D scene using the bpy module, I can utilize properties and methods available for objects in Blender. Here's an example of how I can use the bpy module to manipulate object transformations:
+
+```python
+import bpy
+
+# Get a reference to the active object
+obj = bpy.context.active_object
+
+# Translate the object
+obj.location = (1, 2, 3)
+
+# Rotate the object
+obj.rotation_euler = (0.5, 0.5, 0.5)
+
+# Scale the object
+obj.scale = (2, 2, 2)
+```
+![Q2](https://github.com/sakib404/Idea_Researcher_EvalTaskSolutions/assets/62664582/190714ac-540c-4018-8fdc-890e780246e9)
 
 
 ## Python & Docker
 
-Q2.1: Describe the steps to create a Docker container for a Python-based application. What information would you need to include in the Dockerfile?
+**Q2.1:** Describe the steps to create a Docker container for a Python-based application. What information would you need to include in the Dockerfile?<br>
+**Answer:** To create a Docker container for a Python-based application, I can follow these steps:
+1. *Create a Dockerfile:* Start by creating a file named "Dockerfile" (without any file extension) in your project directory.
+2. *Specify the base image:* In the Dockerfile, specify the base image I want to use for my container. For example, to use the official Python image from Docker Hub, I can add the following line to my Dockerfile: ``` FROM python:3.9 ```
+3. *Set the working directory:* Next, set the working directory inside the container where your application code will be copied. Use the WORKDIR instruction in the Dockerfile: ```WORKDIR /app```
+4. *Copy the application code:* Copy the necessary files and directories from my local machine to the Docker container. Use the `COPY` instruction in the Dockerfile. For example, if my Python application consists of a single file named "app.py" located in my project directory, I can copy it to the container like this: ```COPY app.py```
+5. *Install dependencies:* If my application has dependencies, specify the commands to install them inside the Docker container. I can use the RUN instruction to execute commands in the container. For example, if my application requires certain Python packages, I can use pip to install them:`RUN pip install package1 package2`
+6. *Specify the command to run:* Finally, specify the command that should be executed when the container starts. Use the CMD instruction in the Dockerfile. For a Python application, I can typically use the python command to run my main script. For example: `CMD ["python", "app.py"]`
+7. *Build the Docker image:* Once I have defined the Dockerfile, I need to build the Docker image. Open a terminal or command prompt, navigate to the project directory where my Dockerfile is located, and run the following command: `docker build -t image-name:tag .` `image-name` mentioned here for my Docker image name and tag with a version or label (e.g., latest).
+8. *Run the Docker container:* After the Docker image is built, I can run a container based on that image. Use the following command: `docker run -d image-name:tag .` Replace `image-name` and `tag` with the values you used during the image build.   
+
 
 Q2.2: Explain how you can use Docker Compose to manage multi-container Python applications.
 
