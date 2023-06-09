@@ -1,6 +1,4 @@
-# Technical Exam: Blender, Python, JavaScript 3D, and Docker 
-
-This technical exam incorporates the mentioned technologies: Blender, Python, JavaScript 3D, and Docker.
+# SoLuTiOn Of EvAlUaTiOn TaSk 
 
 ## Blender & Python
 
