@@ -374,5 +374,6 @@ bpy.ops.object.origin_set(type='ORIGIN_CENTER_OF_MASS', center='BOUNDS')
 filepath = "/F:/idea researcher/scripting.gltf"
 bpy.ops.export_scene.gltf(filepath=filepath, use_selection=True)
 ```
+![Practical](https://github.com/sakib404/Idea_Researcher_EvalTaskSolutions/assets/62664582/b5eb9718-07dd-48dc-8138-2fc7e9a0972d)
 
 # THE END
